@@ -1,4 +1,4 @@
-package football;
+package football.aspects;
 
 public @interface ShowDataFrameInTheEnd {
 }

@@ -1,6 +1,6 @@
 package football.enrichers;
 
-import football.ShowDataFrameInTheEnd;
+import football.aspects.ShowDataFrameInTheEnd;
 import football.functions.PlayerToCountryConverter;
 import org.apache.spark.sql.DataFrame;
 import org.springframework.stereotype.Service;

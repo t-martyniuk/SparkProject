@@ -1,7 +1,6 @@
 package football.enrichers;
 
-import football.ShowDataFrameInTheBeginning;
-import football.ShowDataFrameInTheEnd;
+import football.aspects.ShowDataFrameInTheBeginning;
 import org.apache.spark.sql.DataFrame;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import static org.apache.spark.sql.functions.lit;
 @Service
 public class HalfTimeEnricher implements Enricher {
     public static final String HALF_TIME = "halfTime";
-    public static final int HALF_TIME_LENGTH = 45*60;
+    private static final int HALF_TIME_LENGTH = 45*60;
 
     /**
      *Adds first or second halftime column.
