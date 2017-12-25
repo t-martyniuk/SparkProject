@@ -10,6 +10,12 @@ public class CodeToDescriptionConverter implements UDF1<Integer, String> {
     @AutowiredBroadcast
     private Broadcast<UserConfig> broadcast;
 
+    /**
+     * Converts code to its description.
+     * @param code Code of the action from the property file.
+     * @return desctiption corresponding to the code.
+     * @throws Exception
+     */
     @Override
     public String call(Integer code) throws Exception {
         return broadcast.value().getActionCodes().get(code);

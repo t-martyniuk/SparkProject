@@ -10,7 +10,12 @@ public class PlayerToCountryConverter implements UDF1<String, String> {
     @AutowiredBroadcast
     private Broadcast<UserConfig> broadcast;
 
-
+    /**
+     * Matches the player to his country.
+     * @param player player of some team.
+     * @return country(team) name of the player.
+     * @throws Exception
+     */
     @Override
     public String call(String player) throws Exception {
         return broadcast.value().getPlayerCountries().get(player);

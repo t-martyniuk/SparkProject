@@ -20,8 +20,9 @@ public class ShowDataFrameExecution {
             value = "@annotation(football.aspects.ShowDataFrameInTheEnd)",
             returning = "df")
     public void showAfter(JoinPoint joinPoint, DataFrame df) {
+        String className = joinPoint.getTarget().getClass().getSimpleName();
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("===== Showing DataFrame after " + methodName + " ====");
+        System.out.println("===== Showing DataFrame after " + className + "." + methodName + " ====");
         df.show();
         System.out.println("==== Stop showing DataFrame ====");
     }
