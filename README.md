@@ -5,9 +5,9 @@ Final Advanced Programming project.
 
 Make validation and enrichment.
 
-We have a file rawData.txt with the data in specific format.
+```rawData.txt``` - file with the data in specific format.
 
-You have to 
+Task:
 
 * find out non-valid rows. Say, "no such player", "incorrect time", "code-player inconsistency".
 
